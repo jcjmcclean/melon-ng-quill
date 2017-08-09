@@ -193,14 +193,13 @@
         Hr.tagName = 'hr';
 
         var customHrHandler = function(){
+          editor.focus();
           // get the position of the cursor
-          var range = Quill.getSelection();
+          var range = editor.getSelection();
           if (range) {
             // insert the <hr> where the cursor is
-            Quill.insertEmbed(range.index,"hr","null")
+            editor.insertEmbed(range.index,"hr","null")
           }
-
-          console.log('customHrHandler');
         }
 
         Quill.register({
