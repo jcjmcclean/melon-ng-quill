@@ -207,7 +207,13 @@
         });
 
         config.modules.toolbar.handlers = {
-          'hr': customHrHandler
+          'hr': customHrHandler,
+          undo: function(value) {
+            editor.history.undo();
+          },
+          redo: function(value) {
+            editor.history.redo();
+          }
         }
 
         editor = new Quill(editorElem, config)
