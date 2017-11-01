@@ -218,10 +218,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
         Hr.tagName = 'hr';
 
         var customHrHandler = function customHrHandler() {
-          editor.focus();
           // get the position of the cursor
           var range = editor.getSelection();
-          if (range) {
+          if (range && editor.hasFocus()) {
             // insert the <hr> where the cursor is
             editor.insertEmbed(range.index, "hr", "null");
           }
