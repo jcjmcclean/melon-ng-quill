@@ -1,6 +1,6 @@
 {
   "name": "melon-ng-quill",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "main": ["dist/ng-quill.min.js"],
   "description": "AngularJS directive for the QuillJS rich text editor",
   "authors": [
