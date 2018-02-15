@@ -136,7 +136,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
       this.$onChanges = function (changes) {
         if (changes.ngModel && changes.ngModel.currentValue !== changes.ngModel.previousValue) {
-          if(!changes.ngModel.previousValue || (editor && editor.hasFocus())) {
+          if(!changes.ngModel.previousValue || angular.equals(changes.ngModel.previousValue, {}) || (editor && editor.hasFocus())) {
             content = changes.ngModel.currentValue
           }
 
