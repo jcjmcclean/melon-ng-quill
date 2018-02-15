@@ -140,6 +140,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
             content = changes.ngModel.currentValue
           }
 
+          if(changes.ngModel.currentValue === null) {
+            content = null;
+          }
+          else if(changes.ngModel.currentValue) {
+            content = changes.ngModel.currentValue;
+          }
+
           if (editor && !editorChanged) {
             modelChanged = true
             if (content) {
